@@ -1,19 +1,29 @@
 import React from 'react'
-import { 
-    StatusBar, 
-    View, 
-    Text,
-    StyleSheet,
-    Button,
-} from 'react-native'
+import { StatusBar, View, Text, StyleSheet,  } from 'react-native'
+import { Container, Header, LogoArea, Logo, ButtonIcons, PrimaryView } from './Styles'
+import logo from '../../assets/logo.png'
+import { Feather } from '@expo/vector-icons'
+import Feed from '../../components/Feed'
 
 export default function Home(){
     return(
-
-        <View style={styles.container}>
+        <Container>
             <StatusBar/>
-            <Text style={styles.title}>Home</Text>
-        </View>
+            <Header>
+                <LogoArea>
+                    <ButtonIcons>
+                        <Feather name="camera" size={24} color="black" style={{marginRight: 5}} />
+                    </ButtonIcons>
+                    <Logo source={logo} />
+                </LogoArea>
+                <ButtonIcons>
+                    <Feather name="send" size={24} color="black"/>
+                </ButtonIcons>
+            </Header>
+            <PrimaryView showsVerticalScrollIndicator={false}>
+                <Feed />
+            </PrimaryView>
+        </Container>
     )
 }
 

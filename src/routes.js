@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { Feather } from '@expo/vector-icons'; 
+import { Feather } from '@expo/vector-icons'
 
 import Home from './pages/Home'
 import Search from './pages/Search'
